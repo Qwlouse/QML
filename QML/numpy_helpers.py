@@ -9,7 +9,7 @@ def v(s):
     >>> v("1 2 3")
     array([ 1.,  2.,  3.])
     """
-    return np.array(float(e) for e in s.strip().split())
+    return np.array([float(e) for e in s.strip().split()])
 
 def m(s):
     """

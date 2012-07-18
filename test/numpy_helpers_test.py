@@ -4,6 +4,8 @@ from __future__ import division, print_function, unicode_literals
 import unittest
 import numpy as np
 
+from QML.numpy_helpers import v
+
 class TestHelpers(unittest.TestCase):
     def test_v_shape(self):
         self.assertEqual(v("1").shape, (1,))
@@ -22,12 +24,5 @@ class TestHelpers(unittest.TestCase):
         x = v("1 2 3")
         self.assertTrue(isinstance(x, np.ndarray))
 
-
-        
-        
-
-def main():
-    pass
-
 if __name__ == "__main__":
-    main()
+    unittest.main()
