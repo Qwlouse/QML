@@ -14,11 +14,11 @@ class TestHelpers(unittest.TestCase):
 
     def test_v_integer_values(self):
         x = v("1 -2 3")
-        self.assertTrue(all(x == [1, -2, 3]))
+        self.assertTrue(np.all(x == [1, -2, 3]))
     
     def test_v_float_values(self):
         x = v("0.3 -.4 6e-2 7E4")
-        self.assertTrue(all(x == [0.3, -0.4, 0.06, 70000]))
+        self.assertTrue(np.all(x == [0.3, -0.4, 0.06, 70000]))
 
     def test_v_is_numpy_array(self):
         x = v("1 2 3")
